@@ -3,14 +3,18 @@ package com.example.tabview_test;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.Dialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
 
 public class tabtwo extends Activity {
@@ -98,10 +102,37 @@ public class tabtwo extends Activity {
 		
 	}
 	protected void showDialogText(String text,String title){
-    	Dialog dialog = new AlertDialog.Builder(this).setIcon(R.drawable.ic_launcher)
-						.setView(new ScanDetail(this,text))
-						.setTitle(title).show();
-    	dialog.show();
+		InstructionsDialog(text,title);
 	}
+	protected void InstructionsDialog(String text,String title){
+
+		  AlertDialog.Builder ad = new AlertDialog.Builder(this);
+		  ad.setIcon(R.drawable.ic_launcher);
+		  ad.setTitle(title);
+		  LayoutInflater linf = LayoutInflater.from(this);
+		  final View inflator = linf.inflate(R.layout.scorll, null);
+		  ad.setView(inflator);
+
+		  ad.setPositiveButton("OK", 
+		    new android.content.DialogInterface.OnClickListener() {
+		     public void onClick(DialogInterface dialog, int arg1) {
+		      // OK, go back to Main menu
+		     }
+		    }
+		   );
+
+		   ad.setOnCancelListener(new DialogInterface.OnCancelListener(){
+		    public void onCancel(DialogInterface dialog) {
+		     // OK, go back to Main menu   
+		    }}
+		   );
+		   
+			  TextView tv =(TextView)(inflator.findViewById(R.id.TextView01));
+			  if (tv!=null)
+				tv.setText(text);
+
+		  ad.show();
+
+		 }
 	
 }
