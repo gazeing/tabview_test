@@ -42,7 +42,8 @@ public class tabone extends Activity {
 		super.onCreate(savedInstanceState);
 		lView = new ListView(this);
 		setContentView(lView);
-
+		ArrayAdapter<String> adp = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1,getData());
+		lView.setAdapter(adp);
 		lView.setBackgroundResource(R.drawable.background);
 
 		
@@ -149,12 +150,13 @@ public class tabone extends Activity {
 		for (Qrcode q : qrs){
 			addList(q.getRawdata());
 		}
+		lView.invalidateViews();
 	}
 
 	public void addList(String contents){
 		data.add(contents);
-		ArrayAdapter<String> adp = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1,getData());
-		lView.setAdapter(adp);
+//		ArrayAdapter<String> adp = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1,getData());
+//		lView.setAdapter(adp);
 		
 	}
 }
