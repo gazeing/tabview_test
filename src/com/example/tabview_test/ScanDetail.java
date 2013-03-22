@@ -13,7 +13,7 @@ public class ScanDetail extends LinearLayout {
 	public ScanDetail(Context context, String text) {
 		super(context);
 		// TODO Auto-generated constructor stub
-		
+		//setContentView(R.layout.activity_main); 
 		this.setOrientation(LinearLayout.VERTICAL);
 		tvTitle = new TextView(context);
 		tvScanInfo = new TextView(context);
