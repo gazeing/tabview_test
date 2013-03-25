@@ -88,7 +88,7 @@ public class tabtwo extends Activity {
 
 
 
-		showDialogText(str,"Terms & Lisences");
+		showDialogText(str,"Terms & Licenses");
 		
 	}
 	protected void showAcknowledgement() {
