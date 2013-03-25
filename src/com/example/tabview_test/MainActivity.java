@@ -13,7 +13,7 @@ import android.widget.TabHost.TabSpec;
 
 @SuppressWarnings("deprecation")
 public class MainActivity extends TabActivity {
-	private Intent intentAll;
+
 	protected QrcodeDataOperator qdo;
     protected QrcodeDataOperator getQdo() {
 		return qdo;
@@ -85,13 +85,6 @@ public class MainActivity extends TabActivity {
 			tabHost.setCurrentTab(index);
 		else
 			;//tabHost.setCurrentTab(0);
-	}
-	
-	public void setIntentAll(Intent intentAll) {
-		this.intentAll = intentAll;
-	}
-	public Intent getIntentAll() {
-		return intentAll;
 	}
 
 }
