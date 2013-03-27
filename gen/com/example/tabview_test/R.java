@@ -39,27 +39,33 @@ public final class R {
         public static final int title=0x7f02000f;
     }
     public static final class id {
-        public static final int ScrollView01=0x7f080001;
-        public static final int TextView01=0x7f080003;
-        public static final int TextView02=0x7f080004;
-        public static final int action_settings=0x7f08000e;
-        public static final int add_to_favor=0x7f08000a;
-        public static final int btn_title_left=0x7f080007;
-        public static final int btn_title_right=0x7f080008;
-        public static final int delete_item=0x7f08000d;
-        public static final int go_to_web=0x7f080009;
-        public static final int instructions_view=0x7f080002;
-        public static final int scan_detail=0x7f08000c;
-        public static final int send_out=0x7f08000b;
+        public static final int ItemText=0x7f080005;
+        public static final int ItemTitle=0x7f080004;
+        public static final int MyImageInItem=0x7f080002;
+        public static final int MyListItem=0x7f080001;
+        public static final int MyListItemIn=0x7f080003;
+        public static final int ScrollView01=0x7f080006;
+        public static final int TextView01=0x7f080008;
+        public static final int TextView02=0x7f080009;
+        public static final int action_settings=0x7f080013;
+        public static final int add_to_favor=0x7f08000f;
+        public static final int btn_title_left=0x7f08000c;
+        public static final int btn_title_right=0x7f08000d;
+        public static final int delete_item=0x7f080012;
+        public static final int go_to_web=0x7f08000e;
+        public static final int instructions_view=0x7f080007;
+        public static final int scan_detail=0x7f080011;
+        public static final int send_out=0x7f080010;
         public static final int top_title=0x7f080000;
-        public static final int tvtitle=0x7f080006;
-        public static final int widget36=0x7f080005;
+        public static final int tvtitle=0x7f08000b;
+        public static final int widget36=0x7f08000a;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int scorll=0x7f030001;
-        public static final int splash=0x7f030002;
-        public static final int title_bar=0x7f030003;
+        public static final int listitem=0x7f030001;
+        public static final int scorll=0x7f030002;
+        public static final int splash=0x7f030003;
+        public static final int title_bar=0x7f030004;
     }
     public static final class menu {
         public static final int action_chose=0x7f070000;
