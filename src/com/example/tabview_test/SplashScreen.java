@@ -22,7 +22,7 @@ public class SplashScreen extends Activity {
         setContentView(iv);
        
         Thread splashTread = new Thread() {
-            @SuppressWarnings("deprecation")
+
 			@Override
             public void run() {
                 try {
@@ -39,18 +39,21 @@ public class SplashScreen extends Activity {
                     finish();
                     // start mainActivity
                     startActivity(new Intent("com.example.tabview_test.MainActivity"));
-                    stop();
-                }
-            }
-        };
-        splashTread.start();
-    }
-   
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        if (event.getAction() == MotionEvent.ACTION_DOWN) {
-            _active = false;
-        }
-        return true;
-    }
+                    // stop(); //android does not support stop() any more, following code could be a way to exit
+//                  shouldContinue = false;
+//                  join();
+              }
+          }
+      };
+      splashTread.start();
+  }
+ 
+  @Override
+  public boolean onTouchEvent(MotionEvent event) {
+      if (event.getAction() == MotionEvent.ACTION_DOWN) {
+          _active = false;
+      }
+      return true;
+  }
 }
+
