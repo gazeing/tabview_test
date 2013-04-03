@@ -17,6 +17,7 @@ public class DBOpenHelper extends SQLiteOpenHelper{
 		// TODO Auto-generated method stub
 		db.execSQL("CREATE TABLE IF NOT EXISTS qrcode (id integer primary key autoincrement, rawdata varchar(3999), time long, hashcode integer)");
 		db.execSQL("CREATE TABLE IF NOT EXISTS favor (id integer primary key autoincrement, rawdata varchar(3999), time long, hashcode integer)");
+		db.execSQL("CREATE TABLE IF NOT EXISTS userinfo (id integer primary key autoincrement, infodata varchar(3999))");
 	}
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {

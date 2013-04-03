@@ -172,4 +172,31 @@ public class QrcodeDataOperator {
         db.close();  
         return count;  
     } 
+    
+    public void storeUserInfo(String info){
+    	
+        SQLiteDatabase db = helper.getWritableDatabase();     
+        
+        ContentValues values = new ContentValues();
+        
+        values.put("infodata", info);
+        
+        db.insert("userinfo", "id", values);        
+          
+        db.close();  
+    }
+    
+    public String withdrawUserInfo(){
+        SQLiteDatabase db = helper.getReadableDatabase();  
+        
+        // query all record  
+        Cursor c = db.query(false, "userinfo", new String[]{"id","infodata"}, null, null, null, null, "id ASC", null);  
+          
+        String info = "";  
+        while (c.moveToNext())  
+        	info = c.getString(1);  
+        c.close();  
+        db.close();  
+        return info; 
+    }
 }
